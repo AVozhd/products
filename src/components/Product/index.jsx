@@ -15,7 +15,7 @@ const Product = ({ product }) => {
       <div className={styles.title}>{product.title}</div>
       <div className={styles.description}>{product.description}</div>
       <div className={styles.details}>
-        <h6>Details:</h6>
+        <div>Details:</div>
         <Detail title="Price" value={product.price} />
         <Detail title="Category" value={product.category} />
         <Detail title="Downloads" value={product.downloads} />
@@ -24,7 +24,7 @@ const Product = ({ product }) => {
       </div>
       <div className={styles.preview}>
         {product.previews.map((img, index) => (
-          <img key={index} src={img} alt="image" />
+          <img key={index} src={img} alt="city" />
         ))}
       </div>
     </div>

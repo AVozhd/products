@@ -20,6 +20,11 @@
 
 .description {}
 
-.details {}
+.details {
+  & > div:first-child {
+    font-weight: bold;
+    margin: 10px auto;
+  }
+}
 
 .preview {}

@@ -6,8 +6,6 @@ const request = options => {
   let { url } = options;
   url = `${defaultUrl}${url}`;
 
-  console.log(options);
-
   return axios({ ...options, url }).then(response => {
     if (response.status !== 200) throw response;
     return response.data;
