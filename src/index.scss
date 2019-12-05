@@ -16,3 +16,9 @@ code {
   width: 100%;
   min-height: 100vh;
 }
+
+.page_content {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}

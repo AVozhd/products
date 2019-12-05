@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-import styles from "./ErrorBoundary.module.css";
+import styles from "./ErrorBoundary.module.scss";
 
 class ErrorBoundary extends React.PureComponent {
   state = {
@@ -20,13 +20,13 @@ class ErrorBoundary extends React.PureComponent {
     const { children, className } = this.props;
     const { hasError, errorMessage } = this.state;
 
-    return hasError ? (
+    const error = (
       <div className={cn(styles.ErrorBoundary, className)}>
         <h1>{errorMessage}</h1>
       </div>
-    ) : (
-      children
     );
+
+    return hasError ? error : children;
   }
 }
 
