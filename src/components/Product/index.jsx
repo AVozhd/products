@@ -4,6 +4,7 @@ import { createStructuredSelector } from "reselect";
 
 import styles from "./Product.module.scss";
 import { selectProductData } from "../../store/selector";
+import Detail from "../Detail";
 
 const Product = ({ product }) => {
   if (!product) return null;
@@ -15,9 +16,17 @@ const Product = ({ product }) => {
       <div className={styles.description}>{product.description}</div>
       <div className={styles.details}>
         <h6>Details:</h6>
-        {product.details}
+        <Detail title="Price" value={product.price} />
+        <Detail title="Category" value={product.category} />
+        <Detail title="Downloads" value={product.downloads} />
+        <Detail title="Uploaded" value={product.uploaded} />
+        <Detail title="Rating" value={product.rating} />
       </div>
-      <div className={styles.preview}>{product.preview}</div>
+      <div className={styles.preview}>
+        {product.previews.map((img, index) => (
+          <img key={index} src={img} alt="image" />
+        ))}
+      </div>
     </div>
   );
 };
