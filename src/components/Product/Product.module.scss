@@ -18,13 +18,23 @@
   margin-bottom: 10px;
 }
 
-.description {}
+.description {
+  margin-bottom: 10px;
+}
 
 .details {
+  margin-bottom: 20px;
   & > div:first-child {
     font-weight: bold;
     margin: 10px auto;
   }
 }
 
-.preview {}
+.preview {
+  & img {
+    max-height: 150px;
+  }
+  & img:first-of-type {
+    max-height: 200px
+  }
+}

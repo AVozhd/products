@@ -16,11 +16,11 @@ const Product = ({ product }) => {
       <div className={styles.description}>{product.description}</div>
       <div className={styles.details}>
         <div>Details:</div>
-        <Detail title="Price" value={product.price} />
-        <Detail title="Category" value={product.category} />
-        <Detail title="Downloads" value={product.downloads} />
-        <Detail title="Uploaded" value={product.uploaded} />
-        <Detail title="Rating" value={product.rating} />
+        <Detail title="Price:" value={product.price} />
+        <Detail title="Category:" value={product.category} />
+        <Detail title="Downloads:" value={product.downloads} />
+        <Detail title="Uploaded:" value={product.uploaded} />
+        <Detail title="Rating:" value={product.rating} />
       </div>
       <div className={styles.preview}>
         {product.previews.map((img, index) => (
